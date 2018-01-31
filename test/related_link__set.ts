@@ -34,6 +34,8 @@ describe('Related Link Set', function () {
             assert(result_opt.nonEmpty())
             const result = result_opt.get()
             assert.equal(result.size, 2)
+            assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005'))
+            assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/5062689'))
         })
 
         it('should return None when entity does not exist', async function () {
