@@ -1,0 +1,14 @@
+{
+    "files": [
+        "src/**/**.ts",
+        "test/**/**.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es2017",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "alwaysStrict": true
+    }
+}
