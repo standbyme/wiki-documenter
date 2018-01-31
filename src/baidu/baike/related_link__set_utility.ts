@@ -1,6 +1,6 @@
 import * as _ from 'lodash'
 
-import { EntityInterface } from './interface'
+import { EntityInterface } from '../../interface'
 
 export function URL_constructor(entity: EntityInterface): string {
     const { name, modifier__set } = entity

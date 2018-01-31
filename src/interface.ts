@@ -1,9 +1,9 @@
+import * as Cheerio from 'cheerio'
 import { Try } from 'funfix-core'
-
 interface ProjectInterface {
-    localizer(complete_html: string): Try<string>
+    localizer(original_html: Cheerio): Try<Cheerio>
     // tslint:disable-next-line:no-any
-    parser(html: string): Try<any>
+    parser(html: Cheerio): Try<any>
 }
 
 interface EntityInterface {

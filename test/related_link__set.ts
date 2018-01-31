@@ -1,8 +1,8 @@
 import * as assert from 'assert'
 
+import related_link__set from '../src/baidu/baike/related_link__set'
+import { URL_constructor } from '../src/baidu/baike/related_link__set_utility'
 import { EntityInterface } from '../src/interface'
-import related_link__set from '../src/related_link__set'
-import { URL_constructor } from '../src/related_link__set_utility'
 
 describe('Related Link Set', function () {
 

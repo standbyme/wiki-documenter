@@ -2,10 +2,11 @@ import axios from 'axios'
 import * as cheerio from 'cheerio'
 import { Option } from 'funfix-core'
 
-import url_cleaner from './baidu/baike/url_cleaner'
-import { EntityInterface } from './interface'
+import { EntityInterface } from '../../interface'
+import { get_final_url } from '../../utility'
+
 import { URL_constructor } from './related_link__set_utility'
-import { get_final_url } from './utility'
+import url_cleaner from './url_cleaner'
 
 export default async function (entity: EntityInterface): Promise<Option<Set<string>>> {
     const url = URL_constructor(entity)
