@@ -14,4 +14,12 @@ function ParserError() {
 ParserError.prototype = Object.create(Error.prototype)
 ParserError.prototype.constructor = ParserError
 
-export { LocalizerError, ParserError }
+function RequestError() {
+    this.name = 'RequestError'
+    this.message = 'Request Error'
+    this.stack = (new Error()).stack
+}
+RequestError.prototype = Object.create(Error.prototype)
+RequestError.prototype.constructor = RequestError
+
+export { LocalizerError, ParserError, RequestError }
