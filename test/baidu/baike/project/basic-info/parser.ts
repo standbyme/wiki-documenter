@@ -5,7 +5,7 @@ import parser from '../../../../../src/baidu/baike/project/basic-info/parser'
 
 import get_html from '../../../../../src/get_html'
 
-describe('Localizer for basic-info', function () {
+describe('Parser for basic-info', function () {
     this.slow(1000)
 
     it('basic test', async function () {

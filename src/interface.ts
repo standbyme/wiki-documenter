@@ -11,4 +11,4 @@ interface EntityInterface {
     modifier__set: Set<string>
 }
 
-export { EntityInterface }
+export { EntityInterface, ProjectInterface }
