@@ -2,6 +2,7 @@ import * as assert from 'assert'
 
 import { localizer, parser } from '../src/baidu/baike/project/basic-info'
 
+import { LocalizerError, ParserError } from '../src/error'
 import url_to_target_content from '../src/url_to_target_content'
 
 describe('URL to Target Content', function () {
@@ -19,7 +20,7 @@ describe('URL to Target Content', function () {
             const result = await url_to_target_content(url, { parser, localizer })
 
         } catch (error) {
-            assert.equal(error, 'do not have basic-info')
+            assert(error instanceof LocalizerError)
         }
     })
 })
