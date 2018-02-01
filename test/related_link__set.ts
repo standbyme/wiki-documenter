@@ -33,7 +33,7 @@ describe('Related Link Set', function () {
             const result__opt = await related_link__set(mock)
             assert(result__opt.nonEmpty())
             const result = result__opt.get()
-            assert.equal(result.size, 2)
+            assert.equal(result.size, 10)
             assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005'))
             assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/5062689'))
         })
