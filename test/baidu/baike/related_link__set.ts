@@ -13,7 +13,7 @@ describe('Related Link Set', function () {
                 modifier__set: new Set(['中华', '外交部'])
             }
             const result = URL_constructor(mock)
-            assert.equal(result, 'http://www.baidu.com/s?wd=site%3A(baike.baidu.com)%20title%3A%20(%E4%B8%AD%E5%8D%8E%20%E5%A4%96%E4%BA%A4%E9%83%A8%20%E7%8E%8B%E6%AF%85)')
+            assert.equal(result, 'https://www.bing.com/search?q=site%3Abaike.baidu.com++intitle%3A%E4%B8%AD%E5%8D%8E+intitle%3A%E5%A4%96%E4%BA%A4%E9%83%A8+intitle%3A%E7%8E%8B%E6%AF%85')
         })
     })
 
@@ -33,9 +33,9 @@ describe('Related Link Set', function () {
             const result__opt = await related_link__set(mock)
             assert(result__opt.nonEmpty())
             const result = result__opt.get()
-            assert.equal(result.size, 10)
-            assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005'))
-            assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/5062689'))
+            assert.equal(result.size, 2)
+            assert(result.has('https://baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005'))
+            assert(result.has('https://baike.baidu.com/item/%E7%8E%8B%E6%AF%85/5062689'))
         })
 
         it('should return None when entity does not exist', async function () {

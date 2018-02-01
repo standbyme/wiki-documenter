@@ -13,11 +13,10 @@ export default async function (entity: EntityInterface): Promise<Option<Set<stri
 
     const { data } = await axios.get(url)
     const $ = cheerio.load(data)
-    const original_url__list = $('#content_left').find('h3').map(function () {
+    const url__list = $('.b_algo').find('h2').map(function () {
         return $(this).children().first().attr('href')
     }).get()
 
-    const url__list = (await Promise.all(original_url__list.map(get_final_url))).map(url_cleaner)
     const len = url__list.length
     if (len) {
         return Option.of(new Set(url__list))

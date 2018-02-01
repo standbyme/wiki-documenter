@@ -9,6 +9,4 @@ export default async function (news: News) {
         name: p.who,
         modifier__set: new Set([p.org, p.job])
     }))
-
-    console.log(entity__list)
 }
