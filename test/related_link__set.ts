@@ -30,17 +30,17 @@ describe('Related Link Set', function () {
             modifier__set: new Set(['正则表达式'])
         }
         it('should return Some when entity exists', async function () {
-            const result_opt = await related_link__set(mock)
-            assert(result_opt.nonEmpty())
-            const result = result_opt.get()
+            const result__opt = await related_link__set(mock)
+            assert(result__opt.nonEmpty())
+            const result = result__opt.get()
             assert.equal(result.size, 2)
             assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005'))
             assert(result.has('baike.baidu.com/item/%E7%8E%8B%E6%AF%85/5062689'))
         })
 
         it('should return None when entity does not exist', async function () {
-            const result_opt = await related_link__set(wrong_mock)
-            assert(result_opt.isEmpty())
+            const result__opt = await related_link__set(wrong_mock)
+            assert(result__opt.isEmpty())
         })
     })
 })

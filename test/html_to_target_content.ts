@@ -10,9 +10,9 @@ describe('Html to Target Content', function () {
     it('basic test', async function () {
         const url = 'https://baike.baidu.com/item/%E7%8E%8B%E6%AF%85/19877005?fr=aladdin'
         const html = await get_html(url)
-        const result_try = html_to_target_content(html, { parser, localizer })
-        assert(result_try.isSuccess())
-        const result = result_try.get()
+        const result__try = html_to_target_content(html, { parser, localizer })
+        assert(result__try.isSuccess())
+        const result = result__try.get()
         assert.equal(result.get('出生地'), '湖北省南漳县')
     })
 })
