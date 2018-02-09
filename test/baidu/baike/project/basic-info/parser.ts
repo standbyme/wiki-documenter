@@ -7,6 +7,7 @@ import get_html from '../../../../../src/get_html'
 
 describe('Parser for basic-info', function () {
     this.slow(1000)
+    this.timeout(6000)
 
     it('basic test', async function () {
         const url = 'https://baike.baidu.com/item/%E7%8E%8B%E6%AF%85/2652548'
